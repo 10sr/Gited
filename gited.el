@@ -1645,7 +1645,7 @@ local, then prompt for a branch name where to check out BRANCH."
          (local-branch (if new-branch-p
                            (read-string
                             "Checkout in local branch: "
-                            nil nil (file-name-nondirectory branch))
+                            (file-name-nondirectory branch))
                          branch)))
     (save-excursion
       (gited-goto-branch cur-br)
