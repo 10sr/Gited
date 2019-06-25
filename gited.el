@@ -1639,7 +1639,7 @@ local, then prompt for a branch name where to check out BRANCH."
              (not (equal gited-current-branch (gited-get-branchname))))
     (user-error "Cannot checkout a new branch: there are modified files"))
   (let* ((cur-br gited-current-branch)
-         (new-branch-p (and (equal gited-ref-kind "local")
+         (new-branch-p (and (equal gited-ref-kind "remote")
                             (not (member branch (gited-get-branches)))))
          (inhibit-read-only t)
          (local-branch (if new-branch-p
